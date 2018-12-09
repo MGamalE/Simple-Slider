@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.image4,
             R.drawable.image5
     };
+    Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         loadDots();
-
-        Timer timer = new Timer();
+        timer = new Timer();
         timer.scheduleAtFixedRate(new TimerClass(), 2000, 3000);
 
     }
@@ -117,5 +117,6 @@ public class MainActivity extends AppCompatActivity {
             });
         }
     }
+
 
 }
