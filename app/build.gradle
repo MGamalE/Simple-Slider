@@ -16,6 +16,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildTypes.each {
+        it.buildConfigField 'String', 'THE_PHOTO_DB_API_TOKEN', PHOTOURLAPIKEY
+    }
+
 }
 
 dependencies {
@@ -32,4 +36,10 @@ dependencies {
 
     implementation 'com.android.support:support-annotations:28.0.0'
     implementation 'com.android.support:design:28.0.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
 }
